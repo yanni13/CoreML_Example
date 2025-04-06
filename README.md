@@ -15,4 +15,7 @@ CoreML_Example에서 사용한 mlmodel은 이미지 인식에 강점이 있는 Y
 <img src = "https://github.com/user-attachments/assets/4c442d54-b299-428d-ae1d-bd3ef25b9304" width = "300" height ="600">
 <img src = "https://github.com/user-attachments/assets/203cc617-1665-409b-af66-5d360b95a97f" width = "300" height ="600">
 
+### 블로그 링크
+https://yanni13.tistory.com/53
+
 
