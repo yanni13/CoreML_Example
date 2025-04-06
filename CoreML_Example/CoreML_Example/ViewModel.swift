@@ -68,19 +68,8 @@ class ViewModel: ObservableObject {
         let detectedItems = results
             .flatMap { $0.labels }
             .sorted { $0.confidence > $1.confidence }
-//            .prefix(1)
-            .prefix(3) // 상위 3개 결과만 표시
-//
-//        var resultTextArray: [String] = []
-//        for label in detectedItems {
-//            let calorie = FoodData.calorieMapping[label.identifier] ?? 0
-//            resultTextArray.append("\(label.identifier) (\(String(format: "%.2f", label.confidence * 100))%) - \(calorie) kcal")
-//        }
-//
-//        DispatchQueue.main.async {
-//            self.resultText = resultTextArray.isEmpty ? "사진이 없기 때문에 음식을 인식하지 못했습니다." : resultTextArray.joined(separator: ", ")
-//        }
-        
+            .prefix(1)
+
         if detectedItems.isEmpty {
             DispatchQueue.main.async {
                 self.resultText = "음식을 인식하지 못했습니다."
@@ -131,6 +120,7 @@ class ViewModel: ObservableObject {
         switch status {
         case .authorized:
             sourceType = .camera
+            showImagePicker = true
         case .denied, .restricted:
             showAlertAuth(type: "카메라")
         case .notDetermined:
@@ -138,6 +128,7 @@ class ViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     if granted {
                         self?.sourceType = .camera
+                        self?.showImagePicker = true
                     }
                 }
             }

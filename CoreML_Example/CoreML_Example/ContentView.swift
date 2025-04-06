@@ -25,15 +25,19 @@ struct ContentView: View {
             
             // 분석 결과 테스트
             Text(viewModel.resultText)
-                .font(.title)
+                .font(.title3)
+                .foregroundColor(.primary)
                 .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.blue.opacity(0.1))
+                .cornerRadius(12)
+                .padding(.horizontal)
             
             
             
             // 사진 촬영
             Button(action: {
                 viewModel.checkCameraPermission()
-                isActive = true
             }, label: {
                 Text("사진 촬영하기")
             })

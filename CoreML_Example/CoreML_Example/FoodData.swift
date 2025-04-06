@@ -9,11 +9,11 @@ import Foundation
 
 class FoodData {
     static let calorieMapping: [String: Int] = [
-        "Apple": 52,
-        "Banana": 89,
-        "Carrot": 41,
-        "Tomato": 18,
-        "Pizza": 266,
+        "apple": 52,
+        "banana": 89,
+        "carrot": 41,
+        "tomato": 18,
+        "pizza": 266,
         "cake": 416,
         "donut": 198,
         "sandwich": 425,
